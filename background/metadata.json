@@ -1,0 +1,13 @@
+{
+  "name": "background",
+  "version": "1.1.0",
+  "description": "",
+  "type": "baselayer",
+  "color": "#FFFFFF",
+  "format": "jpg",
+  "minzoom": "1",
+  "maxzoom": "10",
+  "scale": "1.000000",
+  "bounds": [-16.25000000, -0.00038285, 60.00076508, 69.99997914],
+  "profile": "mercator"
+}

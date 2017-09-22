@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>background</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+  <script src="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+  <script>
+      var layer;
+    function init() {
+        var bounds = new L.LatLngBounds(
+            new L.LatLng(-0.000383, -16.250000),
+            new L.LatLng(69.999979, 60.000765));
+        var map = L.map('map').fitBounds(bounds);
+        var options = {
+            minZoom: 1,
+            maxZoom: 10,
+            opacity: 1.0,
+            tms: false
+        };
+        layer = L.tileLayer('{z}/{x}/{y}.jpg', options).addTo(map);
+    }
+  </script>
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; z-index: 1; }
+    #slider{ position: absolute; top: 10px; right: 10px; z-index: 5; }
+  </style>
+</head>
+<body onload="init()">
+<div id="map"></div>
+<input id="slider" type="range" min="0" max="1" step="0.1" value="1" oninput="layer.setOpacity(this.value)">
+</body>
+</html>
