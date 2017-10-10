@@ -1,0 +1,23 @@
+{  
+   name:"hillshade",
+   version:"1.1.0",
+   description:"",
+   type:"overlay",
+   format:"png",
+   minzoom:1,
+   maxzoom:10,
+   scale:"1.000000",
+   bounds:[  
+      -15.00041633,
+      -0.00038285,
+      60.00076508,
+      60.00041727
+   ],
+   profile:"mercator",
+   basename:"hillshade",
+   tilejson:"2.0.0",
+   scheme:"xyz",
+   tiles:[  
+      "https://klokantech.github.io/dare-raster-tiles/hillshade/{z}/{x}/{y}.png"
+   ]
+}
